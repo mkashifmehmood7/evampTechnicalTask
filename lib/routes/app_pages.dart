@@ -12,7 +12,6 @@ import '../ui/splash/views/splash_view.dart';
 
 part 'app_routes.dart';
 
-GlobalKey<ScaffoldState> scaffoldGlobalKey = GlobalKey<ScaffoldState>();
 
 class AppPages {
   AppPages._();

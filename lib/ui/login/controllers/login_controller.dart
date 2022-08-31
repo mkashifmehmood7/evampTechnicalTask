@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import '../../../network/system_api_service.dart';
+import '../../../preferences.dart';
 import '../../../routes/app_pages.dart';
 
 class LoginController extends GetxController {
@@ -37,20 +39,30 @@ class LoginController extends GetxController {
   }
 
   Future<void> onLogin() async {
-    if (formKey.currentState == null) {
-      return;
+    // if (formKey.currentState == null) {
+    //   return;
+    // }
+    //
+    // if (!formKey.currentState!.validate()) {
+    //   return;
+    // }
+    //
+    // SystemChannels.textInput.invokeMethod('TextInput.hide');
+    //
+    // formKey.currentState!.save();
+
+    // debugPrint('==========email => $email ======== pass => $password');
+
+    // Get.toNamed(Routes.profile);
+    final resp = await SystemApiService.onLogin(
+      {"userEmail": "demo@evampsaanga.com", "password": "demo@123"},
+    );
+    if (resp.data != null) {
+      debugPrint('=====api=====success');
+      await Preferences.setKey(Preferences.kToken, resp.data!.token!);
+      Get.toNamed(Routes.profile);
+    } else {
+      debugPrint('=====api=====fail');
     }
-
-    if (!formKey.currentState!.validate()) {
-      return;
-    }
-
-    SystemChannels.textInput.invokeMethod('TextInput.hide');
-
-    formKey.currentState!.save();
-
-    debugPrint('==========email => $email ======== pass => $password');
-
-    Get.toNamed(Routes.profile);
   }
 }

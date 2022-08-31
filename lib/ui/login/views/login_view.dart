@@ -9,7 +9,6 @@ class LoginView extends GetView<LoginController> {
 
   @override
   Widget build(BuildContext context) {
-    controller.onInit();
     return Scaffold(
       backgroundColor: primaryColor,
       body: SafeArea(
