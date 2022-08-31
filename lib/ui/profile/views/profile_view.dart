@@ -96,7 +96,7 @@ class ProfileView extends GetView<ProfileController> {
           ),
           const SizedBox(height: 40),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: controller.onExploreMore,
             child: const Text(
               'EXPLORE MORE',
               maxLines: 3,
