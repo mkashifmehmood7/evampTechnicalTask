@@ -50,7 +50,7 @@ class LoginView extends GetView<LoginController> {
               const SizedBox(height: 40),
               TextFormField(
                 textInputAction: TextInputAction.done,
-                keyboardType: TextInputType.phone,
+                keyboardType: TextInputType.emailAddress,
                 validator: controller.onEmailValidator,
                 onSaved: controller.onEmailSaved,
                 cursorColor: whiteColor,
@@ -66,7 +66,6 @@ class LoginView extends GetView<LoginController> {
               const SizedBox(height: 40),
               TextFormField(
                 textInputAction: TextInputAction.done,
-                keyboardType: TextInputType.phone,
                 validator: controller.onPasswordValidator,
                 onSaved: controller.onPasswordSaved,
                 cursorColor: whiteColor,

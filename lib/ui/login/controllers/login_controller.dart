@@ -13,21 +13,23 @@ class LoginController extends GetxController {
     super.onInit();
   }
 
-  String? onEmailValidator(String? value){
-    if (value == null || value.isEmpty) {
-      return "Please enter you email";
+  String? onEmailValidator(String? value) {
+    RegExp regex = RegExp(
+        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
+    if (!(regex.hasMatch(value!))) {
+      return "Please enter valid email";
     } else {
       return null;
     }
   }
-  String? onPasswordValidator(String? value){
+
+  String? onPasswordValidator(String? value) {
     if (value == null || value.isEmpty) {
       return "Please enter you password";
     } else {
       return null;
     }
   }
-
 
   void onEmailSaved(String? value) {
     email = value!;
