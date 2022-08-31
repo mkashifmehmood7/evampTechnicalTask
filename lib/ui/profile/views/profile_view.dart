@@ -30,44 +30,82 @@ class ProfileView extends GetView<ProfileController> {
           ),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          CustomImage(
-            imagePath: 'assets/images/evamp_logo.png',
-            height: 90,
-          ),
-          SizedBox(height: 5),
-          Text(
-            'Task ',
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: primaryColor,
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+        children: [
+          const Align(
+            alignment: AlignmentDirectional.center,
+            child: CustomImage(
+              imagePath: 'assets/images/person.png',
+              height: 150,
+              width: 150,
+              color: secondaryColor,
             ),
           ),
-          SizedBox(height: 20),
-          Text(
-            'by ',
+          const SizedBox(height: 15),
+          const Text(
+            'John Doe ',
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
             style: TextStyle(
-              color: primaryColor,
+              color: blueColor,
+              fontSize: 34,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 10),
+          const Text(
+            'John@gmail.com',
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: blueColor,
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          const SizedBox(height: 40),
+          const Text(
+            'Welcome to Demp App',
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: blueColor,
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 5),
+          const Text(
+            'Lorem Ipsum is simply dummy text of '
+            'the printing and typesetting industry. '
+            'Lorem Ipsum has been the industrys standard dummy '
+            'text ever since the 1500s, when an unknown printer '
+            'took a galley of type and scrambled it to make a '
+            'type specimen book. It has survived not only five '
+            'centuries.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: greyColor,
               fontSize: 14,
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(height: 10),
-          Text(
-            'M Kashif Mehmood',
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: primaryColor,
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
+          const SizedBox(height: 40),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text(
+              'EXPLORE MORE',
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: whiteColor,
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+              ),
             ),
           ),
         ],
