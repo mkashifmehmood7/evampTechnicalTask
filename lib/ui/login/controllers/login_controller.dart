@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 class LoginController extends GetxController {
   final formKey = GlobalKey<FormState>();
 
   String email = '';
   String password = '';
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   String? onEmailValidator(String? value) {
     RegExp regex = RegExp(
@@ -52,6 +49,8 @@ class LoginController extends GetxController {
 
     formKey.currentState!.save();
 
-    print('==========email => $email ======== pass => $password');
+    debugPrint('==========email => $email ======== pass => $password');
+
+    Get.toNamed(Routes.profile);
   }
 }
