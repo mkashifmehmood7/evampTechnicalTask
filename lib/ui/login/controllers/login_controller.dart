@@ -63,6 +63,7 @@ class LoginController extends GetxController {
     }
     if (resp.status == 'success') {
       await Preferences.setKey(Preferences.kToken, resp.userInfo!.token!);
+      await Preferences.saveUserProfile(resp.userInfo!);
       isLoading(false);
       Get.offAllNamed(Routes.profile);
     } else {

@@ -1,0 +1,26 @@
+{
+  "status": "success",
+  "items": [
+    {
+      "id": "1",
+      "itemImage": "https://picsum.photos/200/300?random=90",
+      "name": "Shirt",
+      "description": "Causal Office White Shirts For Mens",
+      "price": 1349.0
+    },
+    {
+      "id": "2",
+      "itemImage": "https://picsum.photos/200/300?random=2",
+      "name": "Shoes",
+      "description": "Cozy Shoes ",
+      "price": 900.0
+    },
+    {
+      "id": "2",
+      "itemImage": "https://picsum.photos/200/300?random=94",
+      "name": "Shoes",
+      "description": "Cozy Shoes for men Loafers moccassion high quality",
+      "price": 920.0
+    }
+  ]
+}
