@@ -4,6 +4,11 @@ A new Flutter project for Evamp Technical Test.
 
 # Completed The Whole APP with Mock Responses as API's are not working
 
+## Warnings & Errors
+```
+0 Warnings
+0 errors
+```
 
 ## Directory Structure
 
