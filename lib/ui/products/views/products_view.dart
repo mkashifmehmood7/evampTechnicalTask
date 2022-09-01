@@ -1,5 +1,6 @@
 import 'package:evamp_task_app/components/custom_image.dart';
 import 'package:evamp_task_app/constants/k_constant.dart';
+import 'package:evamp_task_app/ui/products/views/products_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/products_controller.dart';
@@ -31,9 +32,7 @@ class ProductsView extends GetView<ProductsController> {
       ),
       body: Obx(
         () => controller.isLoading.value
-            ? const Center(
-                child: CircularProgressIndicator(),
-              )
+            ? const ProductLoader()
             : ListView.builder(
                 itemCount: controller.items.length,
                 padding: const EdgeInsets.symmetric(horizontal: 10),
