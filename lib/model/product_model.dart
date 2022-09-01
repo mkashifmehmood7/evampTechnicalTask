@@ -1,7 +1,4 @@
 import 'dart:convert';
-
-import 'package:evamp_task_app/model/profile_model.dart';
-
 import 'item_model.dart';
 
 ProductModel productModelFromJson(String str) =>
