@@ -78,17 +78,23 @@ class LoginView extends GetView<LoginController> {
                 style: const TextStyle(color: whiteColor),
               ),
               const SizedBox(height: 40),
-              ElevatedButton(
-                onPressed: controller.onLogin,
-                child: const Text(
-                  'LOGIN',
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: whiteColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w300,
-                  ),
+              Obx(
+                () => ElevatedButton(
+                  onPressed: () {
+                    controller.onLogin(context);
+                  },
+                  child: controller.isLoading.value
+                      ? const CircularProgressIndicator(color: whiteColor)
+                      : const Text(
+                          'LOGIN',
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: whiteColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
                 ),
               ),
             ],

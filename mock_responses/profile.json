@@ -1,0 +1,13 @@
+{
+  "userInfo": {
+    "token": "P7q7W91a-oMsCeLvIaQm6bTrgtp7&",
+    "profileImage": "https://picsum.photos/200/300?random=90",
+    "name": "John Doe",
+    "email": "demo@evampsaanga.com",
+    "welcomeMessage": "Welcome to E&S Demo Application, We are looking forward to review your completed Task."
+  },
+  "status": "success",
+  "server_time": "1658206359",
+  "data": {
+  }
+}

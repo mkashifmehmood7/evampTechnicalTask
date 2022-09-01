@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
-import '../../../network/system_api_service.dart';
+import '../../../network/mock_system_api_service.dart';
 import '../../../preferences.dart';
 import '../../../routes/app_pages.dart';
 
@@ -11,6 +10,8 @@ class LoginController extends GetxController {
 
   String email = '';
   String password = '';
+
+  RxBool isLoading = false.obs;
 
   String? onEmailValidator(String? value) {
     RegExp regex = RegExp(
@@ -38,30 +39,34 @@ class LoginController extends GetxController {
     password = value!;
   }
 
-  Future<void> onLogin() async {
-    // if (formKey.currentState == null) {
-    //   return;
-    // }
-    //
-    // if (!formKey.currentState!.validate()) {
-    //   return;
-    // }
-    //
-    // SystemChannels.textInput.invokeMethod('TextInput.hide');
-    //
-    // formKey.currentState!.save();
+  Future<void> onLogin(BuildContext context) async {
+    if (formKey.currentState == null) {
+      return;
+    }
 
-    // debugPrint('==========email => $email ======== pass => $password');
+    if (!formKey.currentState!.validate()) {
+      return;
+    }
 
-    // Get.toNamed(Routes.profile);
-    final resp = await SystemApiService.onLogin(
+    SystemChannels.textInput.invokeMethod('TextInput.hide');
+
+    formKey.currentState!.save();
+    FocusManager.instance.primaryFocus?.unfocus();
+
+    isLoading(true);
+
+    final resp = await MockSystemApiService.onMockLogin(
       {"userEmail": "demo@evampsaanga.com", "password": "demo@123"},
     );
-    if (resp.data != null) {
-      debugPrint('=====api=====success');
-      await Preferences.setKey(Preferences.kToken, resp.data!.token!);
-      Get.toNamed(Routes.profile);
+    if (resp == null) {
+      return;
+    }
+    if (resp.status == 'success') {
+      await Preferences.setKey(Preferences.kToken, resp.userInfo!.token!);
+      isLoading(false);
+      Get.offAllNamed(Routes.profile);
     } else {
+      isLoading(false);
       debugPrint('=====api=====fail');
     }
   }
