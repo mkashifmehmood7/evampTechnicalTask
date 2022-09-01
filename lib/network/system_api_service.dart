@@ -9,13 +9,5 @@ abstract class SystemApiService {
       req: req,
       fromJson: ProfileModel.fromJson,
     );
-
   }
 }
-
-
-// debugPrint("Rest API :: assets/mock_json/$endPoint.json");
-// String response = await rootBundle.loadString(
-// 'assets/mock_json/$endPoint.json',
-// );
-// debugPrint("Response :: $response");

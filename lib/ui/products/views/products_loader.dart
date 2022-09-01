@@ -26,7 +26,10 @@ class ProductLoader extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     SizedBox(height: 6),
-                    ShimmerWidget(height: 20, width: 100,),
+                    ShimmerWidget(
+                      height: 20,
+                      width: 100,
+                    ),
                     SizedBox(height: 6),
                     ShimmerWidget(height: 14, width: 70),
                     SizedBox(height: 1),
