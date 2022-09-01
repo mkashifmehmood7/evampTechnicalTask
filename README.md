@@ -4,7 +4,6 @@ A new Flutter project for Evamp Technical Test.
 
 # Completed The Whole APP with Mock Responses as API's are not working
 
-#### Created functions to execute all the tasks, you can see the results in console
 
 ## Directory Structure
 
