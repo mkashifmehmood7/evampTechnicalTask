@@ -1,6 +1,6 @@
 A new Flutter project for Evamp Technical Test.
 
-### Tasks
+### Task
 
 # Completed The Whole APP with Mock Responses as API's are not working
 
