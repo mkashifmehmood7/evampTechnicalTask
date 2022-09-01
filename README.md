@@ -6,6 +6,32 @@ A new Flutter project for Evamp Technical Test.
 
 #### Created functions to execute all the tasks, you can see the results in console
 
+## Directory Structure
+
+```
+├── assets
+│   ├── images
+├── lib
+│   ├── components
+│   │   ├── **/*.css
+│   ├── model
+│   ├── network
+│   ├── routes
+│   ├── ui
+│   │   ├── login
+│   │   │   ├── bindings
+│   │   │   ├── controllers
+│   │   │   ├── views
+│   │   ├── products
+│   │   ├── profile
+│   │   ├── splash
+│   ├── app.dart
+│   ├── main.dart
+│   ├── preferences.dart
+├── mock_responses
+
+```
+
 ## Functionality
 
 ```
@@ -18,9 +44,8 @@ Added logout Button on my own (It was not in the design)
 
 ```
 
-
-
 ## Libraries Used
+
 ```
   get
   cached_network_image
@@ -31,5 +56,4 @@ Added logout Button on my own (It was not in the design)
   
 ```
 
-
-#Thank you
+# Thank you
