@@ -13,7 +13,6 @@ A new Flutter project for Evamp Technical Test.
 │   ├── images
 ├── lib
 │   ├── components
-│   │   ├── **/*.css
 │   ├── model
 │   ├── network
 │   ├── routes
