@@ -1,16 +1,35 @@
-# evamp_task_app
+A new Flutter project for Evamp Technical Test.
 
-A new Flutter project.
+### Tasks
 
-## Getting Started
+# Completed The Whole APP with Mock Responses as API's are not working
 
-This project is a starting point for a Flutter application.
+#### Created functions to execute all the tasks, you can see the results in console
 
-A few resources to get you started if this is your first Flutter project:
+## Functionality
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+Handled Session
+Login Form Validation
+Shimmer effect added for Product Listing
+Mock Responses created with Jsonn Files
+Added logout Button on my own (It was not in the design)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+```
+
+
+
+## Libraries Used
+```
+  get
+  cached_network_image
+  shimmer
+  flutter_svg
+  http
+  flutter_secure_storage
+  
+```
+
+
+#Thank you
